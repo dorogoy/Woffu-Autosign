@@ -1,0 +1,16 @@
+{
+  "name": "woffu-autosign",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "Sirikon <hello@sirikon.me>",
+  "license": "GPL",
+  "dependencies": {
+    "ansi-colors": "^3.2.4",
+    "jsonwebtoken": "^8.5.1",
+    "request": "^2.88.0"
+  }
+}
