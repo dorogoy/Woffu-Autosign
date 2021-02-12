@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const readline = require('readline');
 const c = require('ansi-colors');
 
