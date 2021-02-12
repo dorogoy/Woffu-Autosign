@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const readline = require('readline');
 const c = require('ansi-colors');
 
@@ -35,8 +37,14 @@ const askForUsername = async () => await ask('Username', false);
 const askForPassword = async () => await ask('Password', true);
 
 async function getCredentials() {
-    const user = await askForUsername();
-    const password = await askForPassword();
+    let user, password
+    if (!process.env.WOFFU_USER && !process.env.WOFFU_PASSWORD) {
+        user = await askForUsername();
+        password = await askForPassword();
+    } else {
+        user = process.env.WOFFU_USER;
+        password = process.env.WOFFU_PASSWORD;
+    }
     const token = await woffu.login(user, password);
     const domain = await woffu.getDomain(token);
     return { token, domain };

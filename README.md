@@ -19,3 +19,10 @@ woffu-autosign
 ```
 
 This command will ask your username and password. After that, you'll toggle your sign status.
+
+You can also use an .env file with environment variables (dotenv) to avoid being asked everytime. Ex:
+
+```bash
+WOFFU_USER=your@domain.com
+WOFFU_PASSWORD=1234
+```
